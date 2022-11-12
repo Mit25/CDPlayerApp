@@ -9,12 +9,12 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return null;
+        return new Class<?>[] { CDConfig.class };
     }
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class<?>[] { CDMVCConfig.class };
+        return new Class<?>[] { CDWebMVCConfig.class };
     }
 
     @Override

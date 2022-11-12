@@ -12,21 +12,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.mypackage.model.CDPlayer;
 
 @Controller
+@RequestMapping(value="/cdPlayer")
 public class CDPlayerController {
 	
 	@Autowired
 	private CDPlayer cdPlayer;
 
-	@RequestMapping(value="/ping", method=RequestMethod.GET)
+	@RequestMapping(value="/play", method=RequestMethod.GET)
 	@ResponseBody
-	public String ping() {
-		return "pong";
+	public String playCDPlayer() {
+		return cdPlayer.play().toString();
 	}
 
-	@RequestMapping(value="/CDPlayer/play", method=RequestMethod.GET)
-	@ResponseBody
-	public Boolean playCDPlayer() {
-		cdPlayer.play();
-		return true;
-	}
 }
