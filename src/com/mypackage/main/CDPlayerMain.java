@@ -1,19 +1,17 @@
 /*
  * Author: Mit Swami
- * Compile: javac -cp ../libs/*:../target/ -d ../target/ com/mypackage/test/CDPlayerTest.java
- * Run: java -cp ../libs/*:../target/ com.mypackage.test.CDPlayerTest
  */
-package com.mypackage.test;
+package com.mypackage.main;
 
 import com.mypackage.config.CDConfig;
-import com.mypackage.modal.CDPlayer;
+import com.mypackage.model.CDPlayer;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class CDPlayerTest{
+public class CDPlayerMain {
 
-	public static void main(String args[]){
-		System.out.println("Startting Spring Applicatioon...");
+	public static void main(String args[]) {
+		System.out.println("Starting Spring Applicatioon...");
 		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(CDConfig.class);
 		System.out.println("Application context ready.");
 		

@@ -1,0 +1,1 @@
+java -cp libs/*:build/target com.mypackage.main.CDPlayerMain
